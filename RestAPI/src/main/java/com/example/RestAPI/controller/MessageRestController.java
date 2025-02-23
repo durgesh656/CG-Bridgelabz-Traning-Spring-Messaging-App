@@ -27,4 +27,9 @@ public class MessageRestController {
     public String displayName(@RequestBody UserDTO user){
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
+
+    @PutMapping("/user/{firstname}")
+    public String displayName2(@PathVariable String firstname, @RequestParam String lastname){
+        return "Hello " + firstname + " " + lastname+ " from BridgeLabz";
+    }
 }
